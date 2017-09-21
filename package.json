@@ -22,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/Annacrespo/Restaurant-Heroku-app/issues"
   },
-  "homepage": "https://github.com/Annacrespo/Restaurant-Heroku-app#readme"
+  "homepage": "https://github.com/Annacrespo/Restaurant-Heroku-app#readme",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "path": "^0.12.7"
+  }
 }
