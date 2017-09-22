@@ -30,8 +30,10 @@ var tables = [{
 }
 ];
 // Routes
+
 // =============================================================
 // Basic route that sends the user first to the AJAX Page
+module.exports = function(app) {
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
 });
@@ -45,6 +47,7 @@ app.get("/reserve", function(req, res) {
 app.get("/all", function(req, res) {
   res.json(tables);
 });
+};
 // // Search for Specific Character (or all characters) - provides JSON
 // app.get("/api/:characters?", function(req, res) {
 //   var chosen = req.params.characters;
@@ -70,5 +73,5 @@ app.post("/api/new", function(req, res) {
 // Starts the server to begin listening
 // =============================================================
 app.listen(port, function() {
-  console.log("App listening on PORT " + PORT);
+  console.log("App listening on PORT " + port);
 });
